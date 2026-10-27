@@ -1,26 +1,10 @@
-<?php
-
-namespace App\View\Components;
-
-use Closure;
-use Illuminate\Contracts\View\View;
-use Illuminate\View\Component;
-
-class Bouton extends Component
-{
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
-     * Get the view / contents that represent the component.
-     */
-    public function render(): View|Closure|string
-    {
-        return view('components.bouton');
-    }
-}
+@props([
+   'couleur' => 'violet',
+   'type' => 'button'
+])
+<button
+   type="{{ $type }}"
+   {{ $attributes->merge(['class' => 'bouton bouton-' . $couleur]) }}
+>
+   {{ $slot }}
+</button>

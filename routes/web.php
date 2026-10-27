@@ -3,9 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JeuxContoller;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [JeuxContoller::class, 'indexGabarits']);
+ 
 
 Route::get('/helloWorld', function () {
     return view('hello'); // Implicite hello.blade.php
