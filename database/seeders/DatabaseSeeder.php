@@ -15,11 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        //Il est important d'ajouter le seeder dans le gestionnaire de Seeder nommé DatabaseSeeder.
+        //Sinon rien ne s'ajoute!!!
+       $this->call(TestSeeder::class);
     }
 }
