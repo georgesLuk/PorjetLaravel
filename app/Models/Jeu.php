@@ -27,4 +27,6 @@ class Jeu extends Model
     {
         return $this->hasMany(Image::class);
     }
+   
+
 }

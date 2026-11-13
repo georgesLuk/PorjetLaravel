@@ -17,6 +17,8 @@ NOVA PLAY
 <a href="{{ url('/') }}">Accueil</a>
 <a href="{{ url('/jeuxGabarits') }}">Bibliothèque</a>
 <a href="{{ url('/jeuxGabarits') }}#categories">Catégories</a>
+<a href="{{ route('jeux.create') }}" >Ajouter un jeu</a>
+ 
 </nav>
 <a href="{{ url('/jeuxGabarits') }}" class="header-button">Explorer</a>
 </header>
