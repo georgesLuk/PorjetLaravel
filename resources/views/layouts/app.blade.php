@@ -14,13 +14,12 @@
 NOVA PLAY
 </a>
 <nav class="navigation">
-<a href="{{ url('/') }}">Accueil</a>
-<a href="{{ url('/jeuxGabarits') }}">Bibliothèque</a>
-<a href="{{ url('/jeuxGabarits') }}#categories">Catégories</a>
-<a href="{{ route('jeux.create') }}" >Ajouter un jeu</a>
- 
+    <a href="{{ route('accueil') }}">Accueil</a>
+    <a href="{{ route('bibliotheque') }}">Bibliothèque</a>
+    <a href="{{ route('categories') }}">Catégories</a>
+    <a href="{{ route('jeux.create') }}">Ajouter un jeu</a>
 </nav>
-<a href="{{ url('/jeuxGabarits') }}" class="header-button">Explorer</a>
+<a href="{{ route('bibliotheque') }}" class="header-button">Explorer</a>
 </header>
 <main>
 

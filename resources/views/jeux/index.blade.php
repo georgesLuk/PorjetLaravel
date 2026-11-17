@@ -14,5 +14,8 @@
         <i class="bi bi-plus-circle"></i>
         Ajouter un jeu
     </a>
+    <a href="{{ route('jeux.modifier', $jeu->id) }}" class="btn btn-warning">
+        Modifier
+    </a>
 </body>
 </html>

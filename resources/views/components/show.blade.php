@@ -8,6 +8,8 @@
     <div class="jeu-info">
         <h3>{{ $jeu->titre }}</h3>
         <p>{{ $jeu->description }}</p>
-        <a href="#" class="jeu-link">Découvrir le jeu →</a>
+        <a href="{{ route('jeux.detail', $jeu->id) }}" class="jeu-link">Découvrir le jeu →</a>
+        <a href="{{ route('jeux.modifier', $jeu->id) }}" class="jeu-link">Modifier ✎</a>
+ 
     </div>
 </div>
