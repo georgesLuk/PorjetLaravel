@@ -10,3 +10,4 @@ Route::post('/jeux', [JeuxController::class, 'store'])->name('jeux.store');
 Route::get('/jeux/{jeu}/modifier', [JeuxController::class, 'modifier'])->name('jeux.modifier');
 Route::put('/jeux/{jeu}', [JeuxController::class, 'update'])->name('jeux.update');
 Route::get('/jeux/{jeu}', [JeuxController::class, 'detail'])->name('jeux.detail');
+Route::delete('/jeux/{id}', [JeuxController::class, 'destroy'])->name('jeux.destroy');

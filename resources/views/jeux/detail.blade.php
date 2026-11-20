@@ -33,6 +33,11 @@
             <a href="{{ route('jeux.modifier', $jeu->id) }}" class="bouton bouton-violet">Modifier</a>
             <a href="/jeuxGabarits" class="bouton bouton-blanc">Retour aux jeux</a>
         </div>
+        <form method="POST" action="{{ route('jeux.destroy', $jeu->id) }}" onsubmit="return confirm('Supprimer ce jeu ?')">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="bouton bouton-danger">Supprimer</button>
+        </form>
     </div>
 </section>
 

@@ -35,6 +35,18 @@
 </ul>
 </aside>
 <section class="biblio-liste">
+       @if(session('success'))
+<div class="message-succes">{{ session('success') }}</div>
+@endif
+@if($errors->any())
+<div class="message-erreur">
+<ul>
+           @foreach($errors->all() as $erreur)
+<li>{{ $erreur }}</li>
+           @endforeach
+</ul>
+</div>
+@endif
 <div class="section-heading">
 <h2>{{ request('categorie') ?? 'Tous les jeux' }}</h2>
 <span class="nombre-jeux">{{ $jeux->count() }} jeux</span>

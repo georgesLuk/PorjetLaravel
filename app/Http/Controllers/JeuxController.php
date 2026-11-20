@@ -8,6 +8,8 @@ use App\Models\Studio;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Log;
+
 class JeuxController extends Controller
 
 {
@@ -322,6 +324,18 @@ class JeuxController extends Controller
 
             ->with('success', 'Le jeu a été modifié avec succès !');
 
+    }
+    public function destroy($id)
+    {
+        try {
+            $jeu = Jeu::findOrFail($id);
+            $jeu->images()->delete();
+            $jeu->delete();
+            return redirect()->route('bibliotheque')->with('success', 'Suppression de ' . $jeu->nom . ' réussie !');
+        } catch (\Throwable $e) {
+            Log::debug($e);
+            return redirect()->route('bibliotheque')->withErrors(['La suppression n\'a pas fonctionné']);
+        }
     }
 
 }
